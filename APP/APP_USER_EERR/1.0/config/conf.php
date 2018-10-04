@@ -1,0 +1,6 @@
+<?php
+	function Mayus($variable) {
+		$variable = strtr(strtoupper($variable),"àèìòùáéíóúçñäëïöü","ÀÈÌÒÙÁÉÍÓÚÇÑÄËÏÖÜ");
+		return $variable;
+	}
+?>

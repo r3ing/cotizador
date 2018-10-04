@@ -1,0 +1,35 @@
+select 
+--r.CentrodeCosto_MemberId,co.ParentMemberId,
+co.MemberId
+,r.[Centro de Costo_MemberId]
+,SUM(valor)
+--,COUNT
+
+from  GEC_STG..TEST2	r
+join D_Institucion i on i.MemberId=r.Institucion_MemberId
+join D_Proyecto p on p.MemberId=r.Proyecto_MemberId
+join D_Scenario s on s.MemberId=r.Scenario_MemberId
+join (select distinct Month from D_Time) t on t.Month=r.Time_Month	
+join D_TipoAlumno ta on ta.MemberId=r.[Tipo Alumno_MemberId]
+join D_Usuarios  u on u.MemberId=r.Usuario_MemberId
+left outer join H_CentrodeCosto_Organigrama co on co.MemberId=r.[Centro de Costo_MemberId]
+--join H_CuentaContable_EERR cce on cce.MemberId=r.[Cuenta_MemberId]
+--join H_Sedes_Sedes ss on ss.MemberId=r.Sedes_MemberId
+--join Vw_Dim_CentrosDeCostos cc on cc.Memberid=r.[Centro de Costo_MemberId]
+--join H_Valores_Valores vv on vv.MemberId=r.Valores_MemberId
+--join (select distinct MemberId from Vw_Dim_CentrosDeCostos) co2 on co2.MemberId=r.[Centro de Costo_MemberId]
+--join Vw_Dim_CuentasContables cc2 on cc2.MemberId=r.[Cuenta_MemberId]
+--join (select distinct descripcion from  Vw_Dim_Descripcion) d on d.descripcion=r.descripcion
+--join (select distinct docuemnto_origen from  Vw_Dim_documento_origen) do on do.docuemnto_origen =r.docuemnto_origen
+--join (select distinct DSCRIPTN from  Vw_Dim_DSCRIPTN)  ds on ds.DSCRIPTN=r.DSCRIPTN
+--join (select distinct justificacion from  Vw_Dim_Justificacion) j on j.justificacion=r.justificacion
+--join (select distinct origen from  Vw_Dim_origen)  o on o.origen=r.origen
+--join (select distinct origen_num_dcto from  Vw_Dim_Origen_Num_Dcto)  ond on ond.origen_num_dcto=r.origen_num_dcto
+--join (select distinct REFRENCE from  Vw_Dim_REFRENCE)  re on re.REFRENCE=r.REFRENCE
+--join (select distinct serie_origen from  Vw_Dim_serie_origen)  so on so.serie_origen=r.serie_origen
+--join (select distinct SOURCDOC from  Vw_Dim_SOURCDOC)  sou on sou.SOURCDOC=r.SOURCDOC
+--join (select distinct tipo_cta from  Vw_Dim_TipoCuenta)  tc on tc.tipo_cta=r.tipo_cta
+
+--where co.MemberId =10175 --is null
+--group by CentrodeCosto_MemberId,co.ParentMemberId
+group by co.MemberId,r.[Centro de Costo_MemberId]

@@ -1,0 +1,10 @@
+[22-Sep-2015 05:56:18 UTC] PHP Notice:  Undefined offset: 2 in /home/camivida/public_html/CMSCV/APP/APP_ADM_APPLICATIONS/DB/EDIT.php on line 83
+[22-Sep-2015 05:56:18 UTC] PHP Notice:  Undefined offset: 1 in /home/camivida/public_html/CMSCV/APP/APP_ADM_APPLICATIONS/DB/EDIT.php on line 97
+[22-Sep-2015 05:56:22 UTC] PHP Notice:  Undefined variable: ruta1 in /home/camivida/public_html/CMSCV/APP/APP_ADM_APPLICATIONS/DB/EDIT_DB.php on line 35
+[22-Sep-2015 05:56:22 UTC] PHP Warning:  rename(../../APP_CUB2_CONTACTO,../../APP_CUB2_CONTACT): No such file or directory in /home/camivida/public_html/CMSCV/APP/APP_ADM_APPLICATIONS/DB/EDIT_DB.php on line 51
+[13-Nov-2015 07:54:57 UTC] PHP Notice:  Undefined offset: 2 in /home/camivida/public_html/CMSCV/APP/APP_ADM_APPLICATIONS/DB/EDIT.php on line 83
+[13-Nov-2015 07:54:57 UTC] PHP Notice:  Undefined offset: 1 in /home/camivida/public_html/CMSCV/APP/APP_ADM_APPLICATIONS/DB/EDIT.php on line 97
+[13-Nov-2015 07:55:12 UTC] PHP Notice:  Undefined variable: ruta1 in /home/camivida/public_html/CMSCV/APP/APP_ADM_APPLICATIONS/DB/EDIT_DB.php on line 35
+[13-Nov-2015 07:55:28 UTC] PHP Notice:  Undefined offset: 2 in /home/camivida/public_html/CMSCV/APP/APP_ADM_APPLICATIONS/DB/EDIT.php on line 83
+[13-Nov-2015 07:55:28 UTC] PHP Notice:  Undefined offset: 1 in /home/camivida/public_html/CMSCV/APP/APP_ADM_APPLICATIONS/DB/EDIT.php on line 97
+[13-Nov-2015 07:55:40 UTC] PHP Notice:  Undefined variable: ruta1 in /home/camivida/public_html/CMSCV/APP/APP_ADM_APPLICATIONS/DB/EDIT_DB.php on line 35

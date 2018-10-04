@@ -1,0 +1,2 @@
+[13-Nov-2015 07:54:21 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/camivida/public_html/CMSCV/MASTER/include/verifyAPP.php on line 2
+[13-Nov-2015 07:54:44 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/camivida/public_html/CMSCV/MASTER/include/verifyAPP.php on line 2

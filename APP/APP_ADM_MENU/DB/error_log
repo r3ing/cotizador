@@ -1,0 +1,8 @@
+[13-Nov-2015 07:58:33 UTC] PHP Notice:  Use of undefined constant ON - assumed 'ON' in /home/camivida/public_html/CMSCV/APP/APP_ADM_MENU/DB/EDIT.php on line 42
+[13-Nov-2015 07:58:33 UTC] PHP Notice:  Undefined variable: sel2 in /home/camivida/public_html/CMSCV/APP/APP_ADM_MENU/DB/EDIT.php on line 90
+[13-Nov-2015 07:58:33 UTC] PHP Notice:  Undefined variable: sel3 in /home/camivida/public_html/CMSCV/APP/APP_ADM_MENU/DB/EDIT.php on line 91
+[13-Nov-2015 07:58:33 UTC] PHP Notice:  Undefined variable: act2 in /home/camivida/public_html/CMSCV/APP/APP_ADM_MENU/DB/EDIT.php on line 140
+[13-Nov-2015 07:58:33 UTC] PHP Notice:  Undefined variable: ub2 in /home/camivida/public_html/CMSCV/APP/APP_ADM_MENU/DB/EDIT.php on line 155
+[13-Nov-2015 07:58:33 UTC] PHP Notice:  Undefined variable: ub3 in /home/camivida/public_html/CMSCV/APP/APP_ADM_MENU/DB/EDIT.php on line 156
+[13-Nov-2015 07:58:33 UTC] PHP Notice:  Undefined variable: ub4 in /home/camivida/public_html/CMSCV/APP/APP_ADM_MENU/DB/EDIT.php on line 157
+[13-Nov-2015 07:58:37 UTC] PHP Notice:  Undefined index: orden in /home/camivida/public_html/CMSCV/APP/APP_ADM_MENU/DB/EDIT_DB.php on line 24

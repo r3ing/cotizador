@@ -51,7 +51,7 @@ $descripcion        = $_GET['descripcion'];
                             <div class="col-md-2">
                                 <label> <span class="required">  </span> &nbsp; </label>
                                 <div class="input-group">
-                                    <button type="submit" name="load" id="load" class="btn purple-intense" value="Procesar"> <i class="fa fa-file-archive-o"></i> Procesar </button>
+                                    <button type="submit" name="load" id="load" class="btn purple-intense" value="Procesar"> <i class="fa fa-file-archive-o"></i> Cargar </button>
                                 </div>
                             </div>
                         </div>

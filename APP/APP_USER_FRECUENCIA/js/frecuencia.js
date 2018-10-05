@@ -1,7 +1,8 @@
 'use strict'
 
 $(function(){
-    $('#loading').show();
+    showTable();
+    /*$('#loading').show();
     $('#result').hide();
     $.ajax({
         type: 'GET',
@@ -13,7 +14,7 @@ $(function(){
             $('#loading').hide();
             $('#result').fadeIn('slow');
         }
-    })
+    })*/
 });
 
 
@@ -57,16 +58,70 @@ $('#load').on('submit', function(e) {
 });
 
 
-/*
-$('#sample_1 a.delete').live('click', function (e) {
-    e.preventDefault();
+function showTable(){
+    $('#loading').show();
+    $('#result').hide();
+    $.ajax({
+        type: 'GET',
+        url: 'VIEW/LIST.php',
+        success: function(data) {
+            $('#result').html(data);
+            window.scrollTo(0, 0);
+        },
+        complete: function(){
+            $('#loading').hide();
+            $('#result').fadeIn('slow');
+        }
+    })
+}
 
-    if (confirm("Are you sure to delete this row ?") == false) {
-        return;
+function _edit(id){
+    $('#formFiles').hide();
+    $('#result').hide();
+    $('#loading').show();
+    $.ajax({
+        type: 'POST',
+        url: url,
+        data: 'id='+id,
+        success: function(data) {
+            $('#forms').html(data);
+        },
+        complete: function(){
+            $('#loading').hide();
+            $('#forms').fadeIn('slow');
+            //window.scrollTo(0, document.body.scrollHeight);
+            //$("html, body").animate({ scrollTop: 0 }, "slow");
+
+        }
+    })
+}
+
+function _delete(id){
+    var si = confirm('Realmente desea eliminar esta frecuencia?')
+    if (si)    {
+        $('#formFiles').hide();
+        $('#result').hide();
+        $('#loading').show();
+        $.ajax({
+            type: 'POST',
+            url: 'DB/DELETE_DB.php',
+            data: 'id='+id,
+            success: function(data) {
+                $('#result').html(data);
+                window.scrollTo(0, 0);
+            },
+            complete: function(){
+                $('#loading').hide();
+                $('#result').fadeIn('slow');
+            }
+        })
     }
+}
 
-    var nRow = $(this).parents('tr')[0];
-    $('#sample_1').fnDeleteRow(nRow);
-    alert("Deleted! Do not forget to do some ajax to sync with backend :)");
-});
-*/
+function cancel(){
+    $('#formFiles').fadeIn('slow');
+    showTable();
+}
+
+
+

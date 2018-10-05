@@ -43,7 +43,7 @@
             $costo = $objExcel->getActiveSheet()->getCell('E'.$i)->getCalculatedValue();
             $capacidad = $objExcel->getActiveSheet()->getCell('F'.$i)->getCalculatedValue();
 
-            $sql = $sql . 'INSERT INTO costo(sku, descripcion, rut, nombre, costo, capacidad) VALUES("'.$sku.'", "'.$descripcion.'", "'.$rut.'", "'.$nombre.'", "'.$costo.'", "'.$capacidad.'");';
+            $sql = $sql . 'INSERT INTO costo(sku, descripcion, rut, nombre, costo, capacidad, saldo) VALUES("'.$sku.'", "'.$descripcion.'", "'.$rut.'", "'.$nombre.'", "'.$costo.'", "'.$capacidad.'","'.$capacidad.'");';
         }
 
         $link->beginTransaction();

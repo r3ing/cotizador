@@ -47,7 +47,7 @@
             $codido_pmm = $objExcel->getActiveSheet()->getCell('I'.$i)->getCalculatedValue();
             $descripcion_sku = $objExcel->getActiveSheet()->getCell('J'.$i)->getCalculatedValue();
 
-            $sql = $sql . 'INSERT INTO solicitud(sku, tipo_dist, qty_master_pack, um_med_pedido, uxb_master_pack, um_pedido, cant_sol, codigo_sap, codido_pmm, descripcion_sku)
+            $sql = $sql . 'INSERT INTO solicitud(sku, tipo_dist, qty_master_pack, um_med_pedido, uxb_master_pack, um_pedido, cant_sol, codigo_sap, codigo_pmm, descripcion_sku)
                            VALUES("'.$sku.'", "'.$tipo_dist.'","'.$qty_master_pack.'","'.$um_med_pedido.'","'.$uxb_master_pack.'","'.$um_pedido.'","'.$cant_sol.'","'.$codigo_sap.'","'.$codido_pmm.'","'.$descripcion_sku.'");';
         }
 

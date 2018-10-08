@@ -58,7 +58,7 @@
 			<!-- *********************************************** END   CONTENIDO ***********************************************  style="width:70%"-->
 		</div>
 		<div class="progress">
-			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+			<div class="progress-bar progress-animated progress-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
 		<div id="result" hidden>
 		</div>

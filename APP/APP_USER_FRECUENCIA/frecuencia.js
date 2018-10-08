@@ -17,7 +17,6 @@ $(function(){
     })*/
 });
 
-
 $('#load').on('submit', function(e) {
     e.preventDefault();
     $('#result').hide();
@@ -57,7 +56,6 @@ $('#load').on('submit', function(e) {
     });
 });
 
-
 function showTable(){
     $('#loading').show();
     $('#result').hide();
@@ -66,7 +64,6 @@ function showTable(){
         url: 'VIEW/LIST.php',
         success: function(data) {
             $('#result').html(data);
-            window.scrollTo(0, 0);
         },
         complete: function(){
             $('#loading').hide();
@@ -75,23 +72,21 @@ function showTable(){
     })
 }
 
+
 function _edit(id){
     $('#formFiles').hide();
     $('#result').hide();
     $('#loading').show();
     $.ajax({
         type: 'POST',
-        url: url,
+        url: 'DB/EDIT.php',
         data: 'id='+id,
         success: function(data) {
-            $('#forms').html(data);
+            $('#result').html(data);
         },
         complete: function(){
             $('#loading').hide();
-            $('#forms').fadeIn('slow');
-            //window.scrollTo(0, document.body.scrollHeight);
-            //$("html, body").animate({ scrollTop: 0 }, "slow");
-
+            $('#result').fadeIn('slow');
         }
     })
 }
@@ -108,7 +103,6 @@ function _delete(id){
             data: 'id='+id,
             success: function(data) {
                 $('#result').html(data);
-                window.scrollTo(0, 0);
             },
             complete: function(){
                 $('#loading').hide();
@@ -121,6 +115,57 @@ function _delete(id){
 function cancel(){
     $('#formFiles').fadeIn('slow');
     showTable();
+}
+
+function validateFrm(){
+    var form = true;
+
+    if (document.getElementById('codigo').value == '')
+    {
+        $('#msgCodigo').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese C&oacute;digo.</span>");
+        form = false;
+    }
+    else{
+        if(!validaAlfanumerico(document.getElementById('codigo').value)){
+            $('#msgCodigo').fadeIn(1000).html("<span style='color:#FF0000;'>C&oacute;digo Inv&aacute;lido.</span>");
+            form = false;
+        }
+        else{
+            $('#msgCodigo').fadeIn(1000).html("&nbsp;");
+        }
+    }
+
+    if (document.getElementById('tienda').value == '')
+    {
+        $('#msgTienda').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese Tienda.</span>");
+        form = false;
+    }
+    else{
+        if(!validaAlfanumerico(document.getElementById('tienda').value)){
+            $('#msgTienda').fadeIn(1000).html("<span style='color:#FF0000;'>Tienda Inv&aacute;lido.</span>");
+            form = false;
+        }
+        else{
+            $('#msgTienda').fadeIn(1000).html("&nbsp;");
+        }
+    }
+
+    if (document.getElementById('despacho').value == '')
+    {
+        $('#msgDespacho').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese Despacho.</span>");
+        form = false;
+    }
+    else{
+        if(!validaAlfanumerico(document.getElementById('despacho').value)){
+            $('#msgDespacho').fadeIn(1000).html("<span style='color:#FF0000;'>Despacho Inv&aacute;lido.</span>");
+            form = false;
+        }
+        else{
+            $('#msgDespacho').fadeIn(1000).html("&nbsp;");
+        }
+    }
+
+    return form;
 }
 
 

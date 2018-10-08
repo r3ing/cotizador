@@ -47,8 +47,6 @@
                                 <th> Cant. Sol. (KG/UN) </th>
                                 <th> Codigo SAP </th>
                                 <th> Codigo PMM </th>
-                                <th class="notReport"></th>
-                                <th class="notReport"></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -73,16 +71,6 @@
                                       <td>" . $row[7] . "</td>
                                       <td>" . $row[8] . "</td>
                                       <td>" . $row[9] . "</td>";
-                                echo "<td align ='center'>
-							            <a href='' class='link' onclick=\"edit(" . $row[0] . ")\">
-								            <i class='fa fa-pencil' style='color:#0066FF;'></i>
-							            </a>
-						              </td>";
-                                echo "<td align ='center'>
-							            <a href='' class='link' onclick=\"delete(" . $row[0] . ")\">
-								            <i class='fa fa-times' style='color:#FF0000;'></i>
-							            </a>
-						              </td>";
                                 echo "</tr>";
                             }
                             ?>

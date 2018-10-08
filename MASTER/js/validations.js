@@ -82,3 +82,13 @@ function onlyNumbers(evt) {
 
     return true;
 }
+
+function validaDecimal(text) {
+    var regex = /^\d+(\.\d{0,3})?$/;
+    return regex.test(text);
+}
+
+function validaProvedor(text){
+    var regex = /^[A-Za-z0-9áéíóúÁÉÍÓÚñÑ.&'\-\s]+$/;
+    return regex.test(text);
+}

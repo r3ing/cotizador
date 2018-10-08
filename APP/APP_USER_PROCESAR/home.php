@@ -53,19 +53,17 @@
 					<label> <span class="required">  </span> &nbsp; </label>
 						<button onclick="proccess()" name="load" id="load" class="btn purple-intense" value="Procesar"> <i class="fa fa-file-archive-o"></i> Procesar </button>
 				</div>
-
 			</div>
 			<!-- *********************************************** END   CONTENIDO ***********************************************  style="width:70%"-->
 		</div>
-		<div class="progress">
-			<div class="progress-bar progress-animated progress-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+		<div class="progress" hidden style="height: 3px;">
+			<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
 		<div id="result" hidden>
 		</div>
 		<div id="loading" hidden  width="100%" align="center">
 			<br/>
-			<img src="../../MASTER/images/loaders/loader10.gif" width="3%" class="img-responsive center-block">
-			<h3> Cargando Informaci&oacute;n ... </h3>
+			<h3> Datos Procesados con Exitos!!! </h3>
 		</div>
 		<!-- END SAMPLE TABLE PORTLET-->
 	</div>
@@ -76,8 +74,7 @@
 
 <script>
 	function proccess(){
-		$('.progress-bar').width('%0');
-		//$('#progress').show();
+		$('#loading').hide();
 		$.ajax({
 			type: 'GET',
 			url: 'procesar.php',
@@ -98,16 +95,17 @@
 			},
 			beforeSend: function(){
 				$('.progress-bar').width('%0');
+				$('.progress').show()
 			},
 			success: function(data) {
-				$('#result').html(data);
+				//$('#result').html(data);
+				setTimeout(function(){
+					$('.progress-bar').width('%0');
+					$('.progress').hide();
+					$('#loading').show();
+				}, 2000);
 			},
 			complete: function(){
-				$('#loading').hide();
-				$('#result').fadeIn('slow');
-
-				//$('#progress-bar').width('%0');
-				//$('#progress').hide();
 			}
 		});
 	}

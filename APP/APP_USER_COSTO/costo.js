@@ -79,7 +79,7 @@ function _edit(id){
 }
 
 function _delete(id){
-    var si = confirm('Realmente desea eliminar esta frecuencia?')
+    var si = confirm('Realmente desea eliminar registro?')
     if (si)    {
         $('#formFiles').hide();
         $('#result').hide();
@@ -104,47 +104,18 @@ function cancel(){
     showTable();
 }
 
+
 function validateFrm(){
     var form = true;
 
-    if (document.getElementById('codigo').value == '')
+    if (document.getElementById('sku').value == '')
     {
-        $('#msgCodigo').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese C&oacute;digo.</span>");
+        $('#msgSku').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese SKU.</span>");
         form = false;
     }
     else{
-        if(!validaAlfanumerico(document.getElementById('codigo').value)){
-            $('#msgCodigo').fadeIn(1000).html("<span style='color:#FF0000;'>C&oacute;digo Inv&aacute;lido.</span>");
-            form = false;
-        }
-        else{
-            $('#msgCodigo').fadeIn(1000).html("&nbsp;");
-        }
-    }
-
-    if (document.getElementById('tienda').value == '')
-    {
-        $('#msgTienda').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese Tienda.</span>");
-        form = false;
-    }
-    else{
-        if(!validaAlfanumerico(document.getElementById('tienda').value)){
-            $('#msgTienda').fadeIn(1000).html("<span style='color:#FF0000;'>Tienda Inv&aacute;lido.</span>");
-            form = false;
-        }
-        else{
-            $('#msgTienda').fadeIn(1000).html("&nbsp;");
-        }
-    }
-
-    if (document.getElementById('despacho').value == '')
-    {
-        $('#msgDespacho').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese Despacho.</span>");
-        form = false;
-    }
-    else{
-        if(!validaAlfanumerico(document.getElementById('despacho').value)){
-            $('#msgDespacho').fadeIn(1000).html("<span style='color:#FF0000;'>Despacho Inv&aacute;lido.</span>");
+        if(!validaNumeros(document.getElementById('sku').value)){
+            $('#msgSku').fadeIn(1000).html("<span style='color:#FF0000;'>SKU Inv&aacute;lido.</span>");
             form = false;
         }
         else{
@@ -152,8 +123,84 @@ function validateFrm(){
         }
     }
 
+    if (document.getElementById('descripcion').value == '')
+    {
+        $('#msgDescripcion').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese Descripci&oacute;n.</span>");
+        form = false;
+    }
+    else{
+        if(!validaProvedor(document.getElementById('descripcion').value)){
+            $('#msgDescripcion').fadeIn(1000).html("<span style='color:#FF0000;'>Descripci&oacute;n Inv&aacute;lida.</span>");
+            form = false;
+        }
+        else{
+            $('#msgDescripcion').fadeIn(1000).html("&nbsp;");
+        }
+    }
+
+    if (document.getElementById('rut').value == '')
+    {
+        $('#msgRut').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese Rut.</span>");
+        form = false;
+    }
+    else{
+        if(!validaNumeros(document.getElementById('rut').value)){
+            $('#msgRut').fadeIn(1000).html("<span style='color:#FF0000;'>Rut Inv&aacute;lido.</span>");
+            form = false;
+        }
+        else{
+            $('#msgRut').fadeIn(1000).html("&nbsp;");
+        }
+    }
+
+    if (document.getElementById('nombre').value == '')
+    {
+        $('#msgNombre').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese Nombre.</span>");
+        form = false;
+    }
+    else{
+        if(!validaProvedor(document.getElementById('nombre').value)){
+            $('#msgNombre').fadeIn(1000).html("<span style='color:#FF0000;'>Nombre Inv&aacute;lido.</span>");
+            form = false;
+        }
+        else{
+            $('#msgNombre').fadeIn(1000).html("&nbsp;");
+        }
+    }
+
+    if (document.getElementById('costo').value == '')
+    {
+        $('#msgCosto').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese Costo.</span>");
+        form = false;
+    }
+    else{
+        if(!validaDecimal(document.getElementById('costo').value)){
+            $('#msgCosto').fadeIn(1000).html("<span style='color:#FF0000;'>Costo Inv&aacute;lido.</span>");
+            form = false;
+        }
+        else{
+            $('#msgCosto').fadeIn(1000).html("&nbsp;");
+        }
+    }
+
+    if (document.getElementById('capacidad').value == '')
+    {
+        $('#msgCapacidad').fadeIn(1000).html("<span style='color:#FF0000;'>Ingrese Capacidad.</span>");
+        form = false;
+    }
+    else{
+        if(!validaDecimal(document.getElementById('capacidad').value)){
+            $('#msgCapacidad').fadeIn(1000).html("<span style='color:#FF0000;'>Capacidad Inv&aacute;lido.</span>");
+            form = false;
+        }
+        else{
+            $('#msgCapacidad').fadeIn(1000).html("&nbsp;");
+        }
+    }
+
     return form;
 }
+
 
 
 

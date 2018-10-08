@@ -39,7 +39,7 @@ $descripcion        = $_GET['descripcion'];
             <small>...</small>
         </h3>
         <!-- *********************************************** BEGIN CONTENIDO *********************************************** -->
-        <div class="portlet light bordered">
+        <div class="portlet light bordered" id="formFiles">
             <div class="portlet-body form">
                 <form id="load" name="load" class="form-horizontal form-row-seperated" enctype="multipart/form-data">
                     <div class="form-body">
@@ -76,6 +76,7 @@ $descripcion        = $_GET['descripcion'];
 include ("../FOOTER.php");
 ?>
 <script language="javascript" src="../TEMPLATES/JS/UtilsAjax.js"></script>
-<script language="javascript" src="js/costo.js"></script>
+<script language="javascript" src="../../MASTER/js/validations.js"></script>
+<script language="javascript" src="costo.js"></script>
 </body>
 </html>

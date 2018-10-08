@@ -66,12 +66,12 @@
                                       <td>" . "&#36;".number_format($row[5],2,',','.'). "</td>
                                       <td>" . $row[6] . "</td>";
                                 echo "<td align ='center'>
-							            <a href='' class='link' onclick=\"edit(" . $row[0] . ")\">
+							            <a href='#' class='link' onclick=\"_edit(" . $row[0] . ")\">
 								            <i class='fa fa-pencil' style='color:#0066FF;'></i>
 							            </a>
 						              </td>";
                                 echo "<td align ='center'>
-							            <a href='' class='link' onclick=\"delete(" . $row[0] . ")\">
+							            <a href='#' class='link' onclick=\"_delete(" . $row[0] . ")\">
 								            <i class='fa fa-times' style='color:#FF0000;'></i>
 							            </a>
 						              </td>";

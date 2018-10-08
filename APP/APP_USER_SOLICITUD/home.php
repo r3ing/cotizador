@@ -76,6 +76,6 @@ $descripcion        = $_GET['descripcion'];
 include ("../FOOTER.php");
 ?>
 <script language="javascript" src="../TEMPLATES/JS/UtilsAjax.js"></script>
-<script language="javascript" src="js/solicitud.js"></script>
+<script language="javascript" src="solicitud.js"></script>
 </body>
 </html>

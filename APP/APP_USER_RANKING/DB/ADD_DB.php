@@ -42,7 +42,7 @@
             $descripcion = $objExcel->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
             $ranking_ns = $objExcel->getActiveSheet()->getCell('E'.$i)->getCalculatedValue();
 
-            $sql = $sql . 'INSERT INTO ranking(rut, nombre, material, descripcion, ranking_ns) VALUES("'.$rut.'", "'.$nombre.'", "'.$sku.'", "'.$descripcion.'", "'.$ranking_ns.'");';
+            $sql = $sql . 'INSERT INTO ranking(rut, nombre, sku, descripcion, ranking_ns) VALUES("'.$rut.'", "'.$nombre.'", "'.$sku.'", "'.$descripcion.'", "'.$ranking_ns.'");';
         }
 
         $link->beginTransaction();
